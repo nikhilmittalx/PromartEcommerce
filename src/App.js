@@ -73,7 +73,7 @@ function App() {
     <Router>
       <Header />
 
-      {isAuthenticated && <UserOptions user={user} />}
+      {/* {isAuthenticated && <UserOptions user={user} />} */}
 
       {stripeApiKey && (
         <Elements stripe={loadStripe(stripeApiKey)}>
