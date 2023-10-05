@@ -73,7 +73,6 @@ function App() {
     <Router>
       <Header />
 
-      {/* {isAuthenticated && <UserOptions user={user} />} */}
 
       {stripeApiKey && (
         <Elements stripe={loadStripe(stripeApiKey)}>
@@ -82,6 +81,7 @@ function App() {
       )}
 
       <Switch>
+        {isAuthenticated && <UserOptions user={user} />}
         <Route exact path="/" component={Home} />
         <Route exact path="/product/:id" component={ProductDetails} />
         <Route exact path="/products" component={Products} />
